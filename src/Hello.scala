@@ -14,8 +14,14 @@ object Hello extends App {
     fibo(c+p, c, m)
   }
 
+
+  /*  I want to do something like this.. store functions/methods inside an array:
+      I couldn't find anything like this on google, but assume its possible.
+  */
+  //val ops = Array((a: Double, b: Double) => { a - b}, (a: Double, b: Double) => { a + b})
+  //val ops = Array[(Double : Double) => Double](_ + _, _* _)
+
   val pi = 3.141592;
-  val ops = Array((a: Double, b: Double) => { a - b}, (a: Double, b: Double) => { a + b})
   def EstPi(c : Double = 4.0, i : Int = 1): Int = {
     if (Math.abs(c-pi)<0.00001 || i >= 99999999){ println(s"PI estimate: ${c}"); return i; }
     var j = 3 + ((i-1)*2)
